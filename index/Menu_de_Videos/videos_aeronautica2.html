@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos_Aeronáutica</title>
+  <style>
+    body { background-color: bisque; font-family: Arial, sans-serif; }
+    .container { text-align: center; padding: 20px; }
+    h1, h2 { background-color: rgb(56, 192, 39); padding: 10px; border-radius: 5px; }
+    .boton-volver {
+      background-color: rgb(56, 192, 39); width: 150px; height: 60px;
+      border-radius: 25px; font-size: 18px; font-family: cursive;
+      margin: 10px auto; display: flex; justify-content: center; align-items: center;
+      border: none; cursor: pointer;
+    }
+    .boton-volver a { color: black; text-decoration: none; width:100%; height:100%; display:flex; justify-content:center; align-items:center; }
+    iframe { width: 100%; max-width: 560px; height: 315px; margin: 15px 0; }
+    hr { border: 1px solid #888; width: 100%; margin: 20px auto; }
+    form { background-color: #fff; padding: 20px; border-radius: 15px; max-width: 800px; margin: auto; }
+    .pregunta { margin-bottom: 20px; text-align: left; }
+    .correcta { color: green; font-weight: bold; }
+    .incorrecta { color: red; font-weight: bold; }
+    .resultado { font-size: 20px; font-weight: bold; margin-top: 20px; }
+    .opcion { margin-left: 20px; }
+    .marcado { display: inline-block; margin-left: 10px; font-size: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Aeronáutica</h1>
+    <button class="boton-volver">
+      <a href="menuvideos.html">Volver al Menú</a>
+    </button>
+    <hr><br><br>
+
+
+    <h3>Curso de Aerodinámica</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hKTTIm4H1HI?si=WLA4cqt0tQD8_gLA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+
+    <h3>Curso de Estructuras Aeronáuticas</h3>
+  
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/cuajxgljv9w?si=-9SFykW_QUv559rQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+
+    <h3>Curso de Motores Aeronáuticos</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/llMq5XNiwH0?si=lA7iY6dAGfVzduio" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+
+    <h3>Curso de Diseño Conceptual de un Avión</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yi13vKESVwA?si=5cgHEciRvgBcaOcl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+
+    <h3>Fundamentos de Propulsión</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/JfTQNDaMuJU?si=yZwf4Ruf5CxdZf-_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+
+
+    <h3>Materias de Ingeniería Aeronáutica en el IPN</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/medvFVAHn5U?si=smo1Aia3zLFH4QGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+
+    <h2>Test</h2>
+    <form id="quizForm">
+      <div class="pregunta">
+        <p>1. ¿Qué función cumple el sistema de aviónica en un avión moderno?</p>
+        <label class="opcion"><input type="radio" name="p1" value="a"> Proporcionar potencia a los motores</label><br>
+        <label class="opcion"><input type="radio" name="p1" value="b"> Controlar comunicaciones, navegación y sistemas de control de vuelo</label><span id="r1"></span><br>
+        <label class="opcion"><input type="radio" name="p1" value="c"> Actuar como estabilizador en vuelo</label><br>
+      </div>
+      <div class="pregunta">
+        <p>2. ¿Qué principio físico permite el levantamiento de un avión?</p>
+        <label class="opcion"><input type="radio" name="p2" value="a"> Segunda ley de Newton</label><br>
+        <label class="opcion"><input type="radio" name="p2" value="b"> Principio de Bernoulli</label><span id="r2"></span><br>
+        <label class="opcion"><input type="radio" name="p2" value="c"> Ley de Hooke</label><br>
+      </div>
+      <div class="pregunta">
+        <p>3. ¿Cuál es el componente principal que convierte el combustible en empuje?</p>
+        <label class="opcion"><input type="radio" name="p3" value="a"> El generador</label><br>
+        <label class="opcion"><input type="radio" name="p3" value="b"> El compresor</label><br>
+        <label class="opcion"><input type="radio" name="p3" value="c"> El motor a reacción</label><span id="r3"></span><br>
+      </div>
+      <div class="pregunta">
+        <p>4. En estructuras aeronáuticas, ¿cuál es el principal beneficio del uso del titanio?</p>
+        <label class="opcion"><input type="radio" name="p4" value="a"> Bajo costo</label><br>
+        <label class="opcion"><input type="radio" name="p4" value="b"> Alta resistencia y resistencia a la corrosión</label><span id="r4"></span><br>
+        <label class="opcion"><input type="radio" name="p4" value="c"> Fácil soldadura</label><br>
+      </div>
+      <div class="pregunta">
+        <p>5. ¿Qué etapa del diseño de una aeronave define el tipo de avión y su misión principal?</p>
+        <label class="opcion"><input type="radio" name="p5" value="a"> Diseño conceptual</label><span id="r5"></span><br>
+        <label class="opcion"><input type="radio" name="p5" value="b"> Diseño estructural</label><br>
+        <label class="opcion"><input type="radio" name="p5" value="c"> Producción</label><br>
+      </div>
+      <button type="button" onclick="verificarRespuestas()" style="background-color: rgb(56, 192, 39); height:60px; width:110px; border-radius:20px; font-size:16px;">Enviar respuestas</button>
+      <div id="resultado" class="resultado"></div>
+    </form>
+  </div>
+
+  <script>
+    function verificarRespuestas() {
+      const respuestas = { p1: "b", p2: "b", p3: "c", p4: "b", p5: "a" };
+      let puntaje = 0;
+      for (let i = 1; i <= 5; i++) {
+        const sel = document.querySelector(`input[name="p${i}"]:checked`);
+        const mark = document.getElementById(`r${i}`);
+        if (!sel) { alert("Responde todas las preguntas antes de enviar."); return; }
+        if (sel.value === respuestas[`p${i}`]) {
+          puntaje++;
+          mark.textContent = " ✅";
+          mark.className = "marcado correcta";
+        } else {
+          mark.textContent = " ❌";
+          mark.className = "marcado incorrecta";
+        }
+      }
+      document.getElementById("resultado").textContent = `Obtuviste ${puntaje} de 5 respuestas correctas.`;
+    }
+  </script>
+</body>
+</html>

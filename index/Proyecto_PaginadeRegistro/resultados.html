@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="resultados.css">
+</head>
+<body>
+    <div>
+    <h1 >Resultados del Registro</h1>
+    <table>
+    <tr> <td style="float: left;"><img style="width: 150px; height: 150px;" src="media/LogoEquipo.jpg" ></td> <td ><h2>DESCONECTA Y VIVE </h2></td> <td style="float: right;"><img style="width: 150px; height: 150px;" src="media/Logo CBTIS.png"></h1></td></tr>
+    <hr>
+    <h3>Bienvenido!!</h3>
+    </table>
+    <hr>
+    <div style="display: flex; justify-content: center; margin-top: 30px;"><a href="../Menu_de_Videos/menuvideos.html"><button style="padding: 10px 20px; font-size: 16px; background-color: #4c81cb; color: white; border: none; border-radius: 5px; cursor: pointer;">Ir al menú de videos</button></a></div>
+
+    <div id="resultado"></div>
+
+    <script>
+        let datos = JSON.parse(localStorage.getItem("registroUsuario"));
+
+        if (datos) {
+            let div = document.getElementById("resultado");
+
+            // Definir UACs por semestre igual que en script.js
+            let uacs = {
+                s1: ["Lengua y Comunicación I", "Inglés I", "Pensamiento Matemático I", "Cultura Digital I", "Ciencias Sociales I", "Humanidades I", "La Materia y sus Interacciones"],
+                s2: ["Lengua y Comunicación II", "Inglés II", "Pensamiento Matemático II", "Cultura Digital II", "Ciencias Sociales II", "Conservación de la Energía y sus Interacciones con la Materia"],
+                s3: ["Lengua y Comunicación III", "Inglés III", "Pensamiento Matemático III", "Ciencias Sociales III", "Humanidades III", "Ecosistemas: Interacciones, Energía y Dinámica"],
+                s4: ["Lengua y Comunicación IV", "Inglés IV", "Temas Selectos de Matemáticas", "Conciencia Histórica I", "Taller de Cultura Digital", "Reacciones Químicas"],
+                s5: ["Lengua y Comunicación V", "Inglés V", "Conciencia Histórica II", "La Energía en los Procesos de la Vida Diaria"],
+                s6: ["Lengua y Comunicación VI", "Inglés VI", "Temas Selectos de Ciencias Sociales", "Taller de Lectura Académica", "Proyectos de Investigación Aplicada"]
+            };
+
+            let semestreClave = "s" + datos.semestre;
+            let listaUacs = uacs[semestreClave] || [];
+
+            let semestreNumero = Number(datos.semestre);
+            let numeroModulos;
+            if (semestreNumero <= 2) {
+                numeroModulos = 3;
+            } else if (semestreNumero <= 4) {
+                numeroModulos = 2;
+            } else {
+                numeroModulos = 1;
+            }
+
+            // Crear lista completa de materias, primero UACs, luego módulos
+            let materias = [];
+            for (let i = 0; i < listaUacs.length; i++) {
+                materias[i] = listaUacs[i];
+            }
+            for (let i = 1; i <= numeroModulos; i++) {
+                materias[materias.length] = "Módulo " + i + " de " + datos.especialidad;
+            }
+
+            let html = "";
+            html = html + "<p><strong>Nombre:</strong> " + datos.nombre + "</p>";
+            html = html + "<p><strong>Edad:</strong> " + datos.edad + " años</p>";
+            html = html + "<p><strong>Sexo:</strong> " + datos.sexo + "</p>";
+            html = html + "<p><strong>Semestre:</strong> " + datos.semestre + "</p>";
+            html = html + "<p><strong>Especialidad:</strong> " + datos.especialidad + "</p>";
+
+            html = html + "<p><strong>Calificaciones:</strong></p><ul>";
+
+            for (let i = 0; i < datos.calificaciones.length; i++) {
+                let materia = materias[i] || ("Materia " + (i+1));
+                let cal = datos.calificaciones[i];
+                html = html + "<li>" + materia + ": " + cal + "</li>";
+            }
+            html = html + "</ul>";
+
+            let minCal = datos.calificaciones[0];
+            let minIndex = 0;
+            for (let i = 1; i < datos.calificaciones.length; i++) {
+                if (datos.calificaciones[i] < minCal) {
+                    minCal = datos.calificaciones[i];
+                    minIndex = i;
+                }
+            }
+            let materiaMin = materias[minIndex] || "Materia desconocida";
+
+            html = html + "<p><strong>Calificación más baja:</strong> " + minCal + " en " + materiaMin + "</p>";
+
+            if (minCal < 7) {
+                html = html + '<p style="color:red;"><strong>Te recomendamos visitar alguno de los videos acerca de esta UAC en nuestro menú .</strong></p>';
+            }
+            let suma = 0;
+            for (let i = 0; i < datos.calificaciones.length; i++) {
+                suma = suma + datos.calificaciones[i];
+            }
+            let promedio = (suma / datos.calificaciones.length).toFixed(2);
+            html = html + "<p><strong>Promedio general:</strong> " + promedio + "</p>";
+
+            div.innerHTML = html;
+
+        } else {
+            let div = document.getElementById("resultado");
+            div.innerHTML = "<p>No se encontraron datos registrados.</p>";
+        }
+    </script>
+    </div>
+</body>
+</html>

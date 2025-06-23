@@ -1,0 +1,28 @@
+h1{
+    font-family: Helvetica; 
+    color:teal; 
+    text-align: center;
+}
+table{
+    width: 100%; 
+    text-align: center;
+}
+body {
+    background-color:bisque; 
+    font-family: cursive;
+}
+h3{
+    color:black;
+    text-align: center;
+}
+h2{
+    color:black
+}
+button{
+    background-color: rgb(234, 176, 131);
+    width: 120px;
+     height: 60px; 
+     border-radius: 15px; 
+     font-size: 20px; 
+     font-family: cursive; 
+}

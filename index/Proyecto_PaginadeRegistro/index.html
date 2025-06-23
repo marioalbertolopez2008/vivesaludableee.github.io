@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PÁGINA DE REGISTRO</title>
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="linea"></div>
+    <h1>
+        <img src="media/LogoEquipo.jpg" alt="Logo equipo">
+        REGISTRO - DESCONECTA Y VIVE
+        <img src="media/Logo CBTIS.png" alt="Logo CBTIS">
+    </h1>
+    <hr>
+
+    <table>
+        <tr>
+            <td>
+                <h3>Datos generales</h3>
+                <label for="username">Nombre completo</label>
+                <input type="text" id="username" autocomplete="off">
+                <br><br>
+
+                <label for="ages">Edad</label>
+                <select id="ages">
+                    <option value="14">14</option>
+                    <option value="15" selected>15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                </select>
+                <br><br><br>
+
+                <label>SEXO</label><br><br>
+                <label><input type="radio" name="sex" value="Masculino"> Masculino</label>
+                <label><input type="radio" name="sex" value="Femenino"> Femenino</label>
+                <br><br><br>
+            </td>
+
+            <td>
+                <h3>Rendimiento académico</h3><br><br>
+
+                <label for="cals">SEMESTRE ACTUAL</label>
+                <select id="cals">
+                    <option value="1">Semestre 1</option>
+                    <option value="2" selected>Semestre 2</option>
+                    <option value="3">Semestre 3</option>
+                    <option value="4">Semestre 4</option>
+                    <option value="5">Semestre 5</option>
+                    <option value="6">Semestre 6</option>
+                </select>
+                <br><br>
+
+                <label for="especialidad">ESPECIALIDAD</label>
+                <select id="especialidad">
+                    <option value="">Selecciona una especialidad</option>
+                    <option value="Programación">Programación</option>
+                    <option value="Arquitectura">Arquitectura</option>
+                    <option value="Electromecánica">Electromecánica</option>
+                    <option value="Contabilidad">Contabilidad</option>
+                    <option value="Producción Industrial de Alimentos">Producción Industrial de Alimentos</option>
+                    <option value="Aeronáutica">Aeronáutica</option>
+                    <option value="Ciencia de los Datos e Información">Ciencia de los Datos e Información</option>
+                </select>
+                <br><br>
+
+                <button type="button" id="enviardatos" onclick="evaluarSemestre()">Enviar Datos Iniciales</button>
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+    <div id="uacs"></div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Videos_CDI</title>
+  <style>
+    body {
+      background-color: bisque;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      background-color: rgb(160, 156, 159);
+      padding: 10px;
+    }
+
+    button {
+      background-color: rgb(160, 156, 159);
+      width: 150px;
+      height: 60px;
+      border-radius: 25px;
+      font-size: 18px;
+      font-family: cursive;
+      margin: 10px auto;
+      display: block;
+      border: none;
+      cursor: pointer;
+      color: black;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      margin: 15px 0;
+    }
+
+    hr {
+      border: 1px solid #888;
+      width: 100%;
+      margin: 20px auto;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      background-color: rgb(160, 156, 159);
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .pregunta {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .correcta {
+      color: green;
+      font-weight: bold;
+    }
+
+    .incorrecta {
+      color: red;
+      font-weight: bold;
+    }
+
+    .resultado {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .opcion {
+      margin-left: 20px;
+    }
+
+    .marcado {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ciencia y Datos de la Información</h1>
+  <button onclick="location.href='menuvideos.html'">Volver al Menú</button>
+  <hr />
+
+  <h3>Colección de datos - Saberes y pensamiento científico</h3>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/1o5MAPon7a0?si=Ol7_YzYt5GmDiS6f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <hr />
+
+  <h3>Aprende Ciencia de Datos - para principiantes</h3>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Lt2P88q0Y68?si=XS72QlX6nghJonEp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <hr />
+
+  <h3>Fundamentos de Ciencia de Datos</h3>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/dH5v_mcvlXM?si=GU5RXJu-buWU2XYp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <hr />
+
+  <h3>Cómo analizar datos con Python</h3>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/uVm9VWvC3_A?si=w7HeESczobZd6vky" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <hr />
+
+  <h3>Visualización de datos</h3>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/cIGyj-PgT_c?si=wT40q5OnPKBdnXaO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <hr />
+
+  <h2>Test de Comprensión</h2>
+  <form id="quizForm">
+    <div class="pregunta">
+      <p>1. ¿Qué es la ciencia de datos?</p>
+      <label class="opcion"><input type="radio" name="p1" value="a"> Una rama de la química</label><br>
+      <label class="opcion"><input type="radio" name="p1" value="b"> El estudio de cómo analizar y extraer conocimiento de datos</label><span id="r1"></span><br>
+      <label class="opcion"><input type="radio" name="p1" value="c"> El proceso de construir hardware</label><br>
+    </div>
+
+    <div class="pregunta">
+      <p>2. ¿Qué lenguaje de programación es comúnmente usado en ciencia de datos?</p>
+      <label class="opcion"><input type="radio" name="p2" value="a"> Python</label><span id="r2"></span><br>
+      <label class="opcion"><input type="radio" name="p2" value="b"> HTML</label><br>
+      <label class="opcion"><input type="radio" name="p2" value="c"> CSS</label><br>
+    </div>
+
+    <div class="pregunta">
+      <p>3. ¿Cuál de los siguientes es un objetivo de la visualización de datos?</p>
+      <label class="opcion"><input type="radio" name="p3" value="a"> Esconder los patrones en los datos</label><br>
+      <label class="opcion"><input type="radio" name="p3" value="b"> Hacer más atractivo el sitio web</label><br>
+      <label class="opcion"><input type="radio" name="p3" value="c"> Comunicar la información de forma clara y efectiva</label><span id="r3"></span><br>
+    </div>
+
+    <button style="background-color: rgb(160, 156, 159); height:60px; width: 110px; border-radius: 20px; font-size: 16px;" type="button" onclick="verificarRespuestas()">Enviar respuestas</button>
+    <div id="resultado" class="resultado"></div>
+  </form>
+
+  <script>
+    function verificarRespuestas() {
+      const respuestas = {
+        p1: "b",
+        p2: "a",
+        p3: "c"
+      };
+
+      let puntaje = 0;
+      let total = Object.keys(respuestas).length;
+
+      for (let i = 1; i <= total; i++) {
+        const pregunta = document.querySelector(`input[name="p${i}"]:checked`);
+        const marca = document.getElementById(`r${i}`);
+
+        if (!pregunta) {
+          alert("Por favor responde todas las preguntas antes de enviar.");
+          return;
+        }
+
+        if (pregunta.value === respuestas[`p${i}`]) {
+          puntaje++;
+          marca.textContent = " ✅";
+          marca.className = "marcado correcta";
+        } else {
+          marca.textContent = " ❌";
+          marca.className = "marcado incorrecta";
+        }
+      }
+
+      document.getElementById("resultado").textContent = `Obtuviste ${puntaje} de ${total} respuestas correctas.`;
+    }
+  </script>
+</body>
+</html>

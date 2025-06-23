@@ -1,0 +1,128 @@
+/* Estilos generales */
+body {
+     background-color:bisque; 
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    line-height: 1.5;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+hr {
+    color: rgb(50, 7, 222);
+}
+
+/* Encabezado */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.logo {
+    width: 15%;
+    height: auto;
+}
+
+/* Contenido principal */
+.contenido {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.imagen-lateral {
+    width: 15%;
+    height: auto;
+}
+
+.imagen-estudiante {
+    width: 20%;
+    height: auto;
+}
+
+.contenido-central {
+    max-width: 600px;
+    text-align: center;
+}
+
+.descripcion {
+    font-size: 18px;
+    font-family: cursive;
+    padding: 0 10px;
+}
+
+/* Imagen central */
+.imagen-central {
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Botón */
+.contenedor-boton {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.boton {
+    display: inline-block;
+    text-decoration: none;
+    background-color: deepskyblue;
+    border-radius: 35px;
+    width: 50%;
+    max-width: 300px;
+    height: 100px;
+    font-size: 30px;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    line-height: 100px;
+    border: 5px solid;
+    cursor: pointer;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .encabezado {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo,
+    .imagen-lateral,
+    .imagen-central,
+    .imagen-estudiante {
+        width: 50%;
+    }
+
+    .boton {
+        width: 90%;
+        height: auto;
+        font-size: 20px;
+        padding: 10px;
+        line-height: normal;
+    }
+
+    .descripcion {
+        font-size: 16px;
+    }
+} 

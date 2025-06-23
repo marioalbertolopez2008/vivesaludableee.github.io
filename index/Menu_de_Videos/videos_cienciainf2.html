@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Videos_CDI</title>
+  <style>
+    body {
+      background-color: bisque;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      background-color: #9C9999;
+      padding: 10px;
+    }
+    button {
+      background-color: #9C9999;
+      width: 150px;
+      height: 60px;
+      border-radius: 25px;
+      font-size: 18px;
+      font-family: cursive;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      color: black;
+    }
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      margin: 15px 0;
+    }
+    hr {
+      border: 1px solid #888;
+    }
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 800px;
+      margin: 40px auto;
+    }
+    h2 {
+      background-color: #9C9999;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .pregunta {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .opcion {
+      margin-left: 20px;
+    }
+    .resultado {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Ciencia y Datos de la Información</h1>
+    <button type="button" onclick="location.href='menuvideos.html'">Volver al Menú</button>
+    <hr>
+
+    <h3>Introducción a Machine Learning</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/xrQ1YH0PnrM?si=61GdYG0WiwZ9vsfK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+
+    <h3>Estadística para Data Science</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rLnAdCc7GYM?si=Q_gqlkctGNBaRyII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+
+    <h3>Probabilidad y Estadística en Ciencia de Datos</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dZ9Vm7jqnTk?si=GhkOeLjk_xNZE-wh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+
+    <h3>Fundamentos de Estadística Descriptiva</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7dgn6BwxAeE?si=8T0eVufWaJSDga0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+
+    <h3>Estadística Descriptiva e Inferencial con Python</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/qzQnbduBNjY?si=l8GMhVUoFWgDtvyo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+
+    <h3>Paradigmas</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/D44ilHJQj0U?si=h-1igvD9MkZfgYeK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+
+    <h3>Guía práctica para comenzar en Ciencia de Datos</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/v7zEti5-9NA?si=GcIHS2x5s1mxTKSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+
+    <h3>Qué es Data Science & Aplicaciones (canal Nodd3r)</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YaPa7tPkgCM?si=g3lNe-zUVH-bMONm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+  </div>
+
+  <!-- CUESTIONARIO INTERACTIVO -->
+  <form id="quizForm">
+    <h2>Test sobre los videos</h2>
+
+    <div class="pregunta">
+      <p>1. ¿Cuál es el objetivo del aprendizaje automático (Machine Learning)?</p>
+      <label><input type="radio" name="p1" value="a"> Programar paso a paso el comportamiento del sistema</label><br>
+      <label><input type="radio" name="p1" value="b"> Permitir que los sistemas aprendan patrones a partir de los datos</label><br>
+      <label><input type="radio" name="p1" value="c"> Controlar robots con instrucciones básicas</label>
+    </div>
+
+    <div class="pregunta">
+      <p>2. ¿Qué tipo de estadística permite describir un conjunto de datos mediante gráficos y medidas como la media y desviación estándar?</p>
+      <label><input type="radio" name="p2" value="a"> Inferencial</label><br>
+      <label><input type="radio" name="p2" value="b"> Descriptiva</label><br>
+      <label><input type="radio" name="p2" value="c"> Predictiva</label>
+    </div>
+
+    <div class="pregunta">
+      <p>3. ¿Cuál es uno de los principales usos del lenguaje Python en ciencia de datos?</p>
+      <label><input type="radio" name="p3" value="a"> Crear videojuegos</label><br>
+      <label><input type="radio" name="p3" value="b"> Analizar grandes volúmenes de datos y aplicar modelos estadísticos</label><br>
+      <label><input type="radio" name="p3" value="c"> Diseñar sitios web</label>
+    </div>
+
+    <div class="pregunta">
+      <p>4. ¿Qué paradigma se menciona como clave en ciencia de datos en uno de los videos?</p>
+      <label><input type="radio" name="p4" value="a"> Enfoque determinista</label><br>
+      <label><input type="radio" name="p4" value="b"> Toma de decisiones basada en datos</label><br>
+      <label><input type="radio" name="p4" value="c"> Automatización sin supervisión</label>
+    </div>
+
+    <div class="pregunta">
+      <p>5. Según la guía práctica, ¿cuál es uno de los primeros pasos para comenzar en ciencia de datos?</p>
+      <label><input type="radio" name="p5" value="a"> Aprender álgebra abstracta avanzada</label><br>
+      <label><input type="radio" name="p5" value="b"> Tener un conocimiento básico de estadística, programación y curiosidad por resolver problemas</label><br>
+      <label><input type="radio" name="p5" value="c"> Ser experto en diseño gráfico</label>
+    </div>
+
+    <button type="button" onclick="verificar()">Enviar</button>
+    <div id="resultado" class="resultado"></div>
+  </form>
+
+  <script>
+    function verificar() {
+      const correctas = {
+        p1: "b",
+        p2: "b",
+        p3: "b",
+        p4: "b",
+        p5: "b"
+      };
+
+      let puntos = 0;
+      for (let i = 1; i <= 5; i++) {
+        const res = document.querySelector(`input[name="p${i}"]:checked`);
+        if (!res) {
+          alert("Por favor responde todas las preguntas.");
+          return;
+        }
+        if (res.value === correctas[`p${i}`]) puntos++;
+      }
+
+      const mensaje = `Obtuviste ${puntos} de 5 respuestas correctas.`;
+      document.getElementById("resultado").textContent = mensaje;
+    }
+  </script>
+</body>
+</html>
